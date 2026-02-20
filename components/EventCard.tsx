@@ -1,12 +1,22 @@
 import Link from "next/link";
 import Image from "next/image";
 interface props{
-    title:string,
-    image:string,
-    slug:string,
-    time:string,
-    location:string,
-    date:string
+    title: string;
+    slug: string;
+    description: string;
+    overview: string;
+    image: string;
+    venue: string;
+    location: string;
+    date: string ; // ✅ changed to Date
+    time: string;
+    mode: string;
+    audience: string;
+    agenda: string[];
+    organizer: string;
+    tags: string[];
+    createdAt: Date;
+    updatedAt: Date;
 }
 const EventCard =({title,image,slug,time,location,date}:props)=>{
     return <Link href={`events${slug}`} id="event-card">
