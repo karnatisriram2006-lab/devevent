@@ -19,7 +19,7 @@ interface props{
     updatedAt: Date;
 }
 const EventCard =({title,image,slug,time,location,date}:props)=>{
-    return <Link href={`events${slug}`} id="event-card">
+    return <Link href={`event/${slug}`} id="event-card">
         <Image src={image} alt={title} width={400} height={300} className="poster" />
         <div className="flex flex-row gap-2">
             <Image src="/icons/pin.svg" alt="location" width={13} height={13}/>

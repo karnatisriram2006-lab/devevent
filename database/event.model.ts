@@ -8,7 +8,7 @@ export interface IEvent extends Document {
     image: string;
     venue: string;
     location: string;
-    date: string; // ✅ changed to Date
+    date: Date; // ✅ changed to Date
     time: string;
     mode: string;
     audience: string;
@@ -61,7 +61,7 @@ const EventSchema = new Schema<IEvent>(
             trim: true,
         },
         date: {
-            type: String, // ✅ Correct type
+            type: Date, // ✅ Correct type
             required: true,
         },
         time: {
